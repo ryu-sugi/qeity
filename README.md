@@ -7,23 +7,24 @@
 | nickname            | string              | null: false              |
 | first_name          | string              | null: false              |
 | last_name           | string              | null: false              |
-| first_name_furigana | string              | null: false              |
-| last_name_furigana  | string              | null: false              |
+| first_name_kana     | string              | null: false              |
+| last_name_kana      | string              | null: false              |
 | email               | string              | null: false,unique: true |
 | encrypted_password  | string              | null: false              |
 | birth_date          | date                | null: false              |
 
 ### Association
 
-- has_many :items
+- has_many :arts
 - has_many :buys
+- has_many :comments
 
-## items table
+## arts table
 
 | Column              | Type                | Options                 |
 |-------------------- |---------------------|-------------------------|
-| item                | string              | null: false             |
-| item_move           | Active storageで実装 | null: false             |
+| art                 | string              | null: false             |
+| art_move            | Active storageで実装 | null: false             |
 | category_id         | integer             | null: false             |
 | value               | integer             | null: false             |
 | description         | text                | null: false             |
@@ -31,7 +32,7 @@
 | shipping_cost_id    | integer             | null: false             |
 | shipping_area_id    | integer             | null: false             |
 | shipping_day_id     | integer             | null: false             |
-| user                | references          | foreign_key: true       |
+| user_id             | references          | foreign_key: true       |
 
 
 ### Association
@@ -43,8 +44,8 @@
 
 | Column              | Type                | Options                 |          
 |-------------------- |---------------------|-------------------------|
-| user                | references          | foreign_key: true       |
-| item                | references          | foreign_key: true       |
+| user_id             | references          | foreign_key: true       |
+| art_id              | references          | foreign_key: true       |
 ### Association
 
 - belongs_to :user
@@ -62,8 +63,22 @@
 | building_name       | string              |                         |
 | address             | string              | null: false             |
 | phone               | string              | null: false             |
-| buy                 | references          | foreign_key: true       |
+| buy_id              | references          | foreign_key: true       |
 
 ### Association
 
 - belongs_to :buy
+
+## comments table
+
+| Column              | Type                | Options                 |          
+|-------------------- |---------------------|-------------------------|
+| comment             | string              | null: false             |
+| art_id              | references          | foreign_key: true       |
+| user_id             | references          | foreign_key: true       |
+
+
+### Association
+
+- belongs_to :user
+- belongs_to :art
