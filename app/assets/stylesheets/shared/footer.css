@@ -4,10 +4,25 @@
 
 .ad-footer-contents  {
  background-color: #fffae5;
- height: 13vw;
+ height: 10vw;
  width: 100vw;
  position: absolute;
  bottom: 0;
  display: flex;
  flex-direction: column;
 }
+
+.search-form {
+ width: 65vw;
+ height: 5vh;
+ display: flex;
+ margin-bottom: 5px;
+}
+
+.search-form>.input-box {
+ width: 100%;
+ height: 5vh;
+ padding-left: 10px;
+}
+
+
