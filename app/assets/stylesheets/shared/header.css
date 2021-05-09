@@ -49,19 +49,19 @@
 }
 
 .genre-list {
- color: black;
+ color: #a0522d;
  white-space: nowrap;
  text-decoration: none;
 }
 
 .category-list {
- color: black;
+ color: #a0522d;
  white-space: nowrap;
  text-decoration: none;
 }
 
 .user-nickname {
- color: black;
+ color: #a0522d;
  white-space: nowrap;
  text-decoration: none;
 
@@ -69,19 +69,19 @@
 }
 
 .logout {
- color: black;
+ color: #a0522d;
  white-space: nowrap;
  text-decoration: none;
 }
 
 .login {
- color: black;
+ color: #a0522d;
  white-space: nowrap;
  text-decoration: none;
 }
 
 .sign-up {
- color: black;
+ color: #a0522d;
  white-space: nowrap;
  text-decoration: none;
 }
