@@ -1,0 +1,15 @@
+* {
+ box-sizing: border-box;
+}
+
+.top-page-header {
+ background-color: #fffae5;
+ width: 100vw;
+ display: flex;
+ flex-direction: column;
+}
+
+.furima-icon {
+ width: 10vw;
+ padding: 1px;
+}

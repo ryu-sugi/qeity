@@ -1,0 +1,13 @@
+* {
+ box-sizing: border-box;
+}
+
+.ad-footer-contents  {
+ background-color: #fffae5;
+ height: 13vw;
+ width: 100vw;
+ position: absolute;
+ bottom: 0;
+ display: flex;
+ flex-direction: column;
+}
