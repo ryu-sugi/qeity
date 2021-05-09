@@ -15,16 +15,16 @@
 
 ### Association
 
-- has_many :arts
+- has_many :works
 - has_many :buys
 - has_many :comments
 
-## arts table
+## works table
 
 | Column              | Type                | Options                 |
 |-------------------- |---------------------|-------------------------|
-| art                 | string              | null: false             |
-| art_move            | Active storageで実装 | null: false             |
+| work                | string              | null: false             |
+| work_move           | Active storageで実装 | null: false             |
 | category_id         | integer             | null: false             |
 | value               | integer             | null: false             |
 | description         | text                | null: false             |
@@ -45,11 +45,11 @@
 | Column              | Type                | Options                 |          
 |-------------------- |---------------------|-------------------------|
 | user_id             | references          | foreign_key: true       |
-| art_id              | references          | foreign_key: true       |
+| work_id             | references          | foreign_key: true       |
 ### Association
 
 - belongs_to :user
-- belongs_to :item
+- belongs_to :work
 - has_one    :shipping_address
 
 ## shipping_addresses table 
@@ -74,11 +74,11 @@
 | Column              | Type                | Options                 |          
 |-------------------- |---------------------|-------------------------|
 | comment             | string              | null: false             |
-| art_id              | references          | foreign_key: true       |
+| work_id             | references          | foreign_key: true       |
 | user_id             | references          | foreign_key: true       |
 
 
 ### Association
 
 - belongs_to :user
-- belongs_to :art
+- belongs_to :work
