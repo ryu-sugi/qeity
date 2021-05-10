@@ -1,84 +1,34 @@
-# DB 設計
+### アプリケーション名 
+> Qeity(クエイティー)
 
-## users table
+### アプリケーション概要 このアプリケーションでできることを記述。
+> 動画出品型オークションでの売買
+> 売買の流れ：「出品者が作品の製作動画を投稿」→「購入希望者は動画を閲覧しながら入札」→「時間制限or希望落札価格or出品者の打ち止
+  めにより落札者決定」→「出品者は製作動画を最後まで流す」→「出品者は動画にて作成した作品を落札者に送付」→「落札者は作品を受け取り次第、評価をつける」
 
-| Column              | Type                | Options                  |          
-|-------------------- |---------------------|--------------------------|
-| nickname            | string              | null: false              |
-| first_name          | string              | null: false              |
-| last_name           | string              | null: false              |
-| first_name_kana     | string              | null: false              |
-| last_name_kana      | string              | null: false              |
-| email               | string              | null: false,unique: true |
-| encrypted_password  | string              | null: false              |
-| birth_date          | date                | null: false              |
+### URL デプロイ済みのURLを記述。デプロイが済んでいない場合は、デプロイが完了次第記述すること。
+### テスト用アカウント ログイン機能等を実装した場合は、ログインに必要な情報を記述。
+### Basic認証等を設けている場合は、そのID/Passも記述すること。
 
-### Association
+### 利用方法 このアプリケーションの利用方法を記述。
+> 1,出品者新規会員登録を行う。 2,ユーザーログインを行う。 3,(出品者)マイページから出品ボタン押下。 4,(出品者)動画のURLを貼
+  り付ける。5,(出品者)説明文、開始金額、落札金額、終了時刻を記述して出品完了 6,(出品者)落札後、作品完成まで動画を流した後速やかに落札者宛に作品の送付を行う。 
+>  7,（入札者）新規会員登録を行う。8,（入札者)ユーザーログインを行う。 9,（入札者)検索機能により興味のある作品や、製作者の検
+   索を行う。 10,（入札者)製作過程の動画を視聴しながら、購入希望時に希望金額を入力して入札を行う。11,（入札者)落札決定後は速やかに入金を行う 12,商品到着後に製作者に対して評価をつける。
 
-- has_many :arts
-- has_many :buys
-- has_many :comments
+### 目指した課題解決 このアプリケーションを通じて、どのような人の、どのような課題を解決しようとしているのかを記述。
+> 
 
-## arts table
-
-| Column              | Type                | Options                 |
-|-------------------- |---------------------|-------------------------|
-| art                 | string              | null: false             |
-| art_move            | Active storageで実装 | null: false             |
-| category_id         | integer             | null: false             |
-| value               | integer             | null: false             |
-| description         | text                | null: false             |
-| condition_id        | integer             | null: false             |
-| shipping_cost_id    | integer             | null: false             |
-| shipping_area_id    | integer             | null: false             |
-| shipping_day_id     | integer             | null: false             |
-| user_id             | references          | foreign_key: true       |
+### 洗い出した要件 スプレッドシートにまとめた要件定義を記述。
 
 
-### Association
-
-- belongs_to :user
-- has_one    :buy
-
-## buys table
-
-| Column              | Type                | Options                 |          
-|-------------------- |---------------------|-------------------------|
-| user_id             | references          | foreign_key: true       |
-| art_id              | references          | foreign_key: true       |
-### Association
-
-- belongs_to :user
-- belongs_to :item
-- has_one    :shipping_address
-
-## shipping_addresses table 
+### 実装した機能についての画像やGIFおよびその説明 実装した機能について、それぞれどのような特徴があるのかを列挙する形で記述。画像はGyazoで、GIFはGyazoGIFで撮影すること。
 
 
-| Column              | Type                | Options                 |          
-|-------------------- |---------------------|-------------------------|
-| postal_code         | string              | null: false             |
-| shipping_area_id    | integer             | null: false             |
-| town                | string              | null: false             |
-| building_name       | string              |                         |
-| address             | string              | null: false             |
-| phone               | string              | null: false             |
-| buy_id              | references          | foreign_key: true       |
-
-### Association
-
-- belongs_to :buy
-
-## comments table
-
-| Column              | Type                | Options                 |          
-|-------------------- |---------------------|-------------------------|
-| comment             | string              | null: false             |
-| art_id              | references          | foreign_key: true       |
-| user_id             | references          | foreign_key: true       |
+### 実装予定の機能 洗い出した要件の中から、今後実装予定の機能がある場合は、その機能を記述。
 
 
-### Association
+### データベース設計 ER図等を添付。
 
-- belongs_to :user
-- belongs_to :art
+
+### ローカルでの動作方法 git cloneしてから、ローカルで動作をさせるまでに必要なコマンドを記述。この時、アプリケーション開発に使用した環境を併記することを忘れないこと（パッケージやRubyのバージョンなど）。
