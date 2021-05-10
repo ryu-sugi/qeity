@@ -1,0 +1,43 @@
+.main {
+ background: #f8f8f8;
+}
+
+.select-reason-contents {
+ padding: 5vh 15vw;
+}
+
+.title-contents {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 15vw;
+}
+
+.list-pict {
+ margin-bottom: 20px;
+ width: 100%;
+}
+
+.index-title {
+ font-size: 5vh;
+ line-height: 1.4;
+ font-weight: bold;
+ text-align: center;
+}
+
+.reason-lists {
+  display: flex;
+  justify-content: space-around;
+}
+
+.list-pict{
+ margin-bottom: 20px;
+ width: 100%;
+}
+
+.reason-list-description{
+ font-size: 18px;
+ margin-top: 20px;
+}
