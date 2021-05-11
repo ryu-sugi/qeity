@@ -1,26 +1,22 @@
-.ad-footer-contents {
- background-color: #fffae5;
- height: 10vw;
- width: 100vw;
- position: absolute;
- bottom: 0;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- position: absolute;/*←絶対位置*/
- bottom: 0; /*下に固定*/
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #fffae5;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+
+.footer,
+.push {
+  height: 50px;
 }
 
  .footer {
-  width: 100vw;
-  min-height: 30vh;
-  padding: 5vh 0;
   color: #579A62;
   background-color: #fffae5;
-  text-align: center;
-  position: relative;/*←相対位置*/
-  box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
 }
 
 
@@ -66,4 +62,9 @@
 
 .footer>p {
  font-size: 14px;
+}
+
+.company-name {
+ text-align: center;
+ font-size: 25px;
 }

@@ -1,21 +1,45 @@
 <%= render "shared/header" %>
 <div class='main'>
  <div class='select-reason-contents'>
-    <h2 class='index-title'>Qeity(ｸｴｲﾃｨｰ)とは？</h2>
+    <h2 class='index-title'>Qeity(ｸｴｲﾃｨｰ)とは</h2>
  </div>
   <ul class='reason-lists'>
    <li class='list'>
-     <%= image_tag " ", class:"list-pict" %>
-     <p class='reason-list-description'>製作過程の様子を動画で見ながら即入札可能！</p>
+     <p class='reason-list-description'>製作過程を動画視聴しながら即入札可能！</p>
+     <%= image_tag "syokuninn1.png", class:"list-pict" %>
     </li>
     <li class='list'>
-     <%= image_tag " ", class:"list-pict" %>
      <p class='reason-list-description'>作品に製作段階から関われる！</p>
+     <%= image_tag "syokuninn2.png", class:"list-pict" %>
    </li>
    <li class='list'>
-    <%= image_tag " ", class:"list-pict" %>
-    <p class='reason-list-description'>落札後は出来立ての創作品が直配送！</p>
+    <p class='reason-list-description'>落札後は出来立ての創作品を直配送！</p>
+    <%= image_tag "syokuninn3.png", class:"list-pict" %>
    </li>
   </ul>
 </div>
-<%#render "shared/footer" %>
+
+  <div class='item-contents'>
+      <h2 class='title2'>開催中オークション一覧</h2>
+      <%= link_to '新規投稿商品', "#", class: "subtitle" %>
+   <ul class='item-lists'>
+    <li class='list'>
+    <%= link_to '#' do %>
+    <%= image_tag "sample.png", class: "item-img" %>
+    <div class='item-info'>
+      <h3 class='item-name'>
+        出品サンプル
+      </h3>
+      <div class='item-price'>
+        <span>￥Price</span>
+        <div class='star-btn'>
+          <%= image_tag "star.png", class:"star-icon" %>
+          <span class='star-count'>0</span>
+          </div>
+        </div>
+       </div>
+      <% end %>
+     </li>
+    </ul>
+  </div>
+<%= render "shared/footer" %>
