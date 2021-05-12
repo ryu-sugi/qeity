@@ -25,6 +25,7 @@
  line-height: 1.4;
  font-weight: bold;
  text-align: center;
+ color: #bb8064;
 }
 
 .reason-lists {
@@ -38,6 +39,67 @@
 }
 
 .reason-list-description{
- font-size: 18px;
+ font-size: 20px;
  margin-top: 20px;
+ font-weight: 600;
+ text-align: center;
+}
+
+.item-img {
+  width: 33vh;
+  height: 33vh;
+}
+
+.item-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+}
+
+.item-name {
+  font-size: 2.5vh;
+  text-decoration: none; 
+
+}
+
+.item-price {
+  font-size: 1.5vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.star-btn {
+  display: flex;
+  align-items: center;
+}
+
+.star-icon {
+  height: 2vh;
+  width: 2vh;
+  margin-right: 0.5vw;
+}
+
+.star-count {
+  font-size: 2vh;
+}
+
+.subtitle {
+  font-size: 3vh;
+  margin: 1vh 0;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.item-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.title2 {
+  font-size: 35px;
+  font-weight: 600;
 }

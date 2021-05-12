@@ -15,16 +15,16 @@
 
 ### Association
 
-- has_many :arts
+- has_many :works
 - has_many :buys
 - has_many :comments
 
-## arts table
+## works table
 
 | Column              | Type                | Options                 |
 |-------------------- |---------------------|-------------------------|
-| art                 | string              | null: false             |
-| art_move            | Active storageで実装 | null: false             |
+| work_name           | string              | null: false             |
+| work_move           | Active storageで実装 | null: false             |
 | category_id         | integer             | null: false             |
 | value               | integer             | null: false             |
 | description         | text                | null: false             |
@@ -32,7 +32,7 @@
 | shipping_cost_id    | integer             | null: false             |
 | shipping_area_id    | integer             | null: false             |
 | shipping_day_id     | integer             | null: false             |
-| user_id             | references          | foreign_key: true       |
+| user                | references          | foreign_key: true       |
 
 
 ### Association
@@ -44,8 +44,8 @@
 
 | Column              | Type                | Options                 |          
 |-------------------- |---------------------|-------------------------|
-| user_id             | references          | foreign_key: true       |
-| art_id              | references          | foreign_key: true       |
+| user                | references          | foreign_key: true       |
+| art                 | references          | foreign_key: true       |
 ### Association
 
 - belongs_to :user
@@ -63,7 +63,7 @@
 | building_name       | string              |                         |
 | address             | string              | null: false             |
 | phone               | string              | null: false             |
-| buy_id              | references          | foreign_key: true       |
+| buy                 | references          | foreign_key: true       |
 
 ### Association
 
