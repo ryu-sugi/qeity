@@ -1,3 +1,4 @@
+<%= render "shared/second-header"%>
 <main class="main">
   <div class="inner">
     <%= link_to current_user.nickname, user_path(current_user.id), method: :GET, class: "#" %>
@@ -7,6 +8,8 @@
         </div>
       <% end %>
    <ul class='#'>
-    <li><%= link_to '出品する', destroy_user_session_path, method: :delete, class: "#" %></li>
-    
+    <li><%= link_to '入札中', class: "#" %></li>
+    <li><%= link_to '落札品', class: "#" %></li>
+   </ul>
 </div>
+<%= render "shared/footer" %>
