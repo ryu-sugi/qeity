@@ -111,6 +111,7 @@ justify-content: space-around;
 .lists-second {
  display: flex;
  justify-content: space-around;
+ list-style: none;
 }
 
 .nav-second {
