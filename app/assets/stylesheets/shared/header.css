@@ -46,6 +46,7 @@
 
 .lists {
  white-space: nowrap;
+ list-style: none;
 }
 
 .genre-list {
