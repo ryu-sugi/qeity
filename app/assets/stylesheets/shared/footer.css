@@ -13,8 +13,6 @@
 .footer, .push {
 }
 
-
-
 .search-form {
  width: 65vw;
  height: 5vh;
@@ -48,6 +46,7 @@
  color:#579A62;;
  font-size: 12px;
  line-height: 30px;
+ text-decoration: none;
 }
 
 .logo-white {
