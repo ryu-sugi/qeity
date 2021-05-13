@@ -27,7 +27,7 @@
     <% @work.each do |work| %>
      <% if work.video.attached? %>
       <li class='list'>
-      <%= link_to works_path(work.id), method: :get do %>
+       <%= link_to "#" do %>
         <div class='item-img-content'>
           <%= video_tag rails_blob_path(work.video), autoplay: :true, loop: :true, muted: :true, class:"move-list"%>
         </div>
@@ -43,8 +43,8 @@
             </div>
           </div>
         </div>
+        <% end %>
       <% end %>
-     <% end %>
     <% end %>
   <% end %>
 
