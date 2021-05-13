@@ -24,15 +24,16 @@
    <ul class='item-lists'>
     <li class='list'>
     <%= link_to '#' do %>
-    <%= image_tag "sample.png", class: "item-img" %>
+    <%= video_tag "/videos/move.mp4", autoplay: :true, loop: :true, muted: :true, autoplay: :true , class:"move-list" %>
     <div class='item-info'>
       <h3 class='item-name'>
         出品サンプル
       </h3>
       <div class='item-price'>
-        <span>￥Price</span>
+        <span class='item-value'>￥現在価格</span>
+        <span>終了時刻 5/14/18:00</span>
         <div class='star-btn'>
-          <%= image_tag "star.png", class:"star-icon" %>
+          <%= image_tag "good.png", class:"star-icon" %>
           <span class='star-count'>0</span>
           </div>
         </div>

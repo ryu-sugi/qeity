@@ -1,6 +1,7 @@
 <div class="items-sell-contents">
-  <%= render "shared/second-header"%>
-
+  <header class="items-sell-header">
+    <%= link_to image_tag("qeity-logo.png", class:"qeity-icon"), "/" %>
+  </header>
   <div class="items-sell-main">
       <h2 class="items-sell-title">商品の情報を入力</h2>
     <%= form_with model: @work, local: true do |f| %>
@@ -25,7 +26,7 @@
         作品名
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :work_name, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+      <%= f.text_area :work_name, class:"items-text", id:"iteme0-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
       <div class="items-explain">
         <div class="weight-bold-text">
           製作品の説明
