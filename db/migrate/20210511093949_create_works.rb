@@ -6,7 +6,6 @@ class CreateWorks < ActiveRecord::Migration[6.0]
       t.integer :category_id,          null: false
       t.integer :value,                null: false
       t.integer :description,          null: false
-      t.integer :condition_id,         null: false
       t.integer :shipping_cost_id,     null: false
       t.integer :shipping_area_id,     null: false
       t.integer :shipping_day_id,      null: false

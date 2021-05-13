@@ -10,7 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_11_093949) do
+ActiveRecord::Schema.define(version: 2021_05_13_024032) do
+
+  create_table "buy_adds", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "postal_code", null: false
+    t.integer "shipping_area_id", null: false
+    t.string "town", null: false
+    t.string "building_name"
+    t.string "address", null: false
+    t.string "phone", null: false
+    t.bigint "buy_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["buy_id"], name: "index_buy_adds_on_buy_id"
+  end
+
+  create_table "buys", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "work_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_buys_on_user_id"
+    t.index ["work_id"], name: "index_buys_on_work_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -35,7 +57,6 @@ ActiveRecord::Schema.define(version: 2021_05_11_093949) do
     t.integer "category_id", null: false
     t.integer "value", null: false
     t.integer "description", null: false
-    t.integer "condition_id", null: false
     t.integer "shipping_cost_id", null: false
     t.integer "shipping_area_id", null: false
     t.integer "shipping_day_id", null: false
@@ -45,5 +66,8 @@ ActiveRecord::Schema.define(version: 2021_05_11_093949) do
     t.index ["user_id"], name: "index_works_on_user_id"
   end
 
+  add_foreign_key "buy_adds", "buys"
+  add_foreign_key "buys", "users"
+  add_foreign_key "buys", "works"
   add_foreign_key "works", "users"
 end
