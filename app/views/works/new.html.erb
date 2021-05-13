@@ -7,9 +7,8 @@
     <%= form_with model: @work, local: true do |f| %>
 
        <%= render 'shared/error_messages', model: f.object %>
-
        <div class="img-upload">
-      <div class="weight-bold-text">
+       <div class="weight-bold-text">
         出品動画
         <span class="indispensable">必須</span>
       </div>
@@ -17,7 +16,7 @@
         <p>
           クリックしてファイルをアップロード
         </p>
-        <%= f.file_field :image, id:"#" %>
+      <%= f.file_field :video, id:"work-video" %> 
       </div>
     </div>
 

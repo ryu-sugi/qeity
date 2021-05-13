@@ -16,4 +16,11 @@ end
 belongs_to       :user
 has_one          :buy
 has_one_attached :video 
+
+extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :category
+  belongs_to :condition
+  belongs_to :shipping_area
+  belongs_to :shipping_cost
+  belongs_to :shipping_day
 end
