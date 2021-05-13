@@ -28,7 +28,6 @@
 | category_id         | integer             | null: false             |
 | value               | integer             | null: false             |
 | description         | text                | null: false             |
-| condition_id        | integer             | null: false             |
 | shipping_cost_id    | integer             | null: false             |
 | shipping_area_id    | integer             | null: false             |
 | shipping_day_id     | integer             | null: false             |
