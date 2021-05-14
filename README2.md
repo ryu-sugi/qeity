@@ -24,7 +24,7 @@
 | Column              | Type                | Options                 |
 |-------------------- |---------------------|-------------------------|
 | work_name           | string              | null: false             |
-| work_move           | Active storageで実装 | null: false             |
+| work_move           | Carrierwaveで実装    | null: false             |
 | category_id         | integer             | null: false             |
 | value               | integer             | null: false             |
 | description         | text                | null: false             |
