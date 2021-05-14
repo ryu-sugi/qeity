@@ -1,0 +1,73 @@
+<%= render "shared/header" %>
+<div class='main'>
+ <div class='select-reason-contents'>
+    <h2 class='index-title'>Qeity(ｸｴｲﾃｨｰ)とは</h2>
+ </div>
+  <ul class='reason-lists'>
+   <li class='list'>
+     <p class='reason-list-description'>製作過程を動画視聴しながら即入札可能！</p>
+     <%= image_tag "syokuninn1.png", class:"list-pict" %>
+    </li>
+    <li class='list'>
+     <p class='reason-list-description'>作品に製作段階から関われる！</p>
+     <%= image_tag "syokuninn2.png", class:"list-pict" %>
+   </li>
+   <li class='list'>
+    <p class='reason-list-description'>落札後は出来立ての創作品を直配送！</p>
+    <%= image_tag "syokuninn3.png", class:"list-pict" %>
+   </li>
+  </ul>
+</div>
+
+  <div class='item-contents'>
+      <h2 class='title2'>開催中オークション一覧</h2>
+   <ul class='item-lists'>
+
+   <% if @work[0] != nil %>
+    <% @work.each do |work| %>
+     <% if work.video.attached? %>
+      <li class='list'>
+       <%= link_to "#" do %>
+        <div class='item-img-content'>
+          <%= video_tag rails_blob_path(work.video), autoplay: :true, loop: :true, muted: :true, class:"move-list"%>
+        </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= work.work_name %>
+          </h3>
+          <div class='item-price'>
+            現在価格<%= work.value %>円<br><%= work.shipping_cost.name %>
+            <div class='star-btn'>
+            <%= image_tag "good.png", class:"star-icon" %>
+              <span class='star-count'>0</span>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+   <% if @work.length == 0 %>
+    <li class='list'>
+    <%= link_to '#' do %>
+    <%= video_tag "/videos/move.mp4", autoplay: :true, loop: :true, muted: :true, autoplay: :true , class:"move-list" %>
+    <div class='item-info'>
+      <h3 class='item-name'>
+        出品サンプル
+      </h3>
+      <div class='item-price'>
+        <span class='item-value'>￥現在価格</span>
+        <span>終了時刻 5/14/18:00</span>
+        <div class='star-btn'>
+          <%= image_tag "good.png", class:"star-icon" %>
+          <span class='star-count'>0</span>
+          </div>
+        </div>
+       </div>
+      <% end %>
+     </li>
+    </ul>
+   <% end %>
+  </div>
+<%= render "shared/footer" %>

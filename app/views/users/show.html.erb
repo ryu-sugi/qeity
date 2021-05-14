@@ -1,0 +1,15 @@
+<%= render "shared/second-header"%>
+<main class="main">
+  <div class="inner">
+    <%= link_to current_user.nickname, user_path(current_user.id), method: :GET, class: "#" %>
+     <% if user_signed_in?  && current_user.id %>
+          <%= link_to "編集する", "#", class: "#" %>
+          <%= link_to "削除する", "#", class: "#" %>
+        </div>
+      <% end %>
+   <ul class='#'>
+    <li><%= link_to '入札中', class: "#" %></li>
+    <li><%= link_to '落札品', class: "#" %></li>
+   </ul>
+</div>
+<%= render "shared/footer" %>

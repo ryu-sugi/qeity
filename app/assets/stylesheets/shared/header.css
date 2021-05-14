@@ -1,0 +1,119 @@
+
+.top-page-header {
+ background-color: #fffae5;
+ width: 100vw;
+ display: flex;
+ align-items: center;
+}
+
+.qeity-icon {
+ width: 10vw;
+ padding: 1px;
+ align-items: flex-start;
+}
+
+.search-form {
+ width: 30vw;
+ height: 1vh;
+ position: relative; top:10px; left:200px; 
+}
+
+.input-box {
+ width: 200px;
+ height: 10vh;
+ padding-left: 10px;
+}
+
+.search-button {
+ width: 8vh;
+ height: 5vh;
+ border: 0;
+ cursor: pointer;
+ background-color: black;
+ padding: 1px;
+}
+
+.search-icon {
+ width: 99%;
+ height: 99%;
+}
+
+.nav {
+ font-size: 20px;
+ width: 10%;
+ position: relative; left:50px; 
+}
+
+.lists {
+ white-space: nowrap;
+ list-style: none;
+}
+
+.genre-list {
+ color: #a0522d;
+ white-space: nowrap;
+ text-decoration: none;
+ list-style: none;
+}
+
+.category-list {
+ color: #a0522d;
+ white-space: nowrap;
+ text-decoration: none;
+ list-style: none;
+}
+
+.user-nickname {
+ color: #a0522d;
+ white-space: nowrap;
+ text-decoration: none;
+ list-style: none;
+}
+
+.logout {
+ color: #a0522d;
+ white-space: nowrap;
+ text-decoration: none;
+ list-style: none;
+}
+
+.login {
+ color: #a0522d;
+ white-space: nowrap;
+ text-decoration: none;
+ list-style: none;
+}
+
+.sign-up {
+ color: #a0522d;
+ white-space: nowrap;
+ text-decoration: none;
+ list-style: none;
+}
+
+.title {
+ color: #579A62;
+ font-size: 35px;
+ white-space: nowrap;
+ text-align: center;
+ position: relative; left:150px; 
+}
+
+.top-page {
+justify-content: space-around;
+}
+
+.nav-second {
+ font-size: 20px;
+ position: relative; top:5px;  left:300px; 
+}
+
+.lists-second {
+ display: flex;
+ justify-content: space-around;
+ list-style: none;
+}
+
+.nav-second {
+ width: 15%;
+}

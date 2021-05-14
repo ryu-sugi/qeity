@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  devise_for :users
+  get 'works/index'
+  root to: "works#index"
+  resources :works, only: [:new, :create] do
+   resources :buys, only: [:index, :create]
+ end
+  resources :users, only: :show
 end
