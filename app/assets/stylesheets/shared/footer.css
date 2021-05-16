@@ -1,3 +1,10 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+ }
+
+
 .footer {
  height: 100%;
  color: #579A62;

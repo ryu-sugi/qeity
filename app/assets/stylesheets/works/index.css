@@ -1,3 +1,13 @@
+* {
+ margin: 0px;
+ padding: 0px;
+  }
+  
+
+a {
+  text-decoration: none;
+}
+
 .main {
  background: #f8f8f8;
 }
@@ -22,10 +32,9 @@
 
 .index-title {
  font-size: 5vh;
- line-height: 1.4;
+ color: #bb8064;
  font-weight: bold;
  text-align: center;
- color: #bb8064;
 }
 
 .reason-lists {
@@ -66,6 +75,7 @@
   font-size: 2vh;
   display: flex;
   justify-content: space-between;
+  text-decoration: none;
 }
 
 .star-btn {
