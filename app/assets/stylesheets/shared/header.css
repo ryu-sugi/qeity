@@ -1,7 +1,11 @@
+* {
+ box-sizing: border-box;
+}
 
 .top-page-header {
+ height: 100%;
+ width: 100%;
  background-color: #fffae5;
- width: 100vw;
  display: flex;
  align-items: center;
 }
@@ -50,6 +54,8 @@
 }
 
 .genre-list {
+ margin: 10px;
+ padding: 1px;
  color: #a0522d;
  white-space: nowrap;
  text-decoration: none;
@@ -57,6 +63,7 @@
 }
 
 .category-list {
+ margin: 10px;
  color: #a0522d;
  white-space: nowrap;
  text-decoration: none;
