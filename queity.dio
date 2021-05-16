@@ -1,6 +1,6 @@
 <mxfile>
     <diagram id="CrRxKujqeZBHaQ9V2byA" name="ページ1">
-        <mxGraphModel dx="2039" dy="586" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2039" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -19,13 +19,13 @@
                 <mxCell id="5" value="buys テーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
                     <mxGeometry x="-280" y="280" width="270" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="6" value="ー user_id (references型,forgin_key: true)  &#10;ー work_id  (references型,forgin_key: true)   &#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="5" vertex="1">
+                <mxCell id="6" value="ー user_id (references型,forgin_key: true)  &#10;ー art_id  (references型,forgin_key: true)   &#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="5" vertex="1">
                     <mxGeometry y="30" width="270" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="7" value="works テーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
+                <mxCell id="7" value="artts テーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
                     <mxGeometry x="340" y="190" width="260" height="200" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" value="ー work (string型,NOT NULL)&#10;ー work_move（Active storageで実装）&#10;ー category_id (integer型,NOT NULL)&#10;ー value  (integer型,NOT NULL)&#10;ー description(text型,NOT NULL)&#10;ー condition_id (integer型,NOT NULL)&#10;ー shipping_cost_id (integer型,NOT NULL)&#10;ー shipping_area_id (integer型,NOT NULL)&#10;ー shipping_day_id (integer型,NOT NULL)&#10;ー user_id (referrences型,NOT NULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="7" vertex="1">
+                <mxCell id="8" value="ー art (string型,NOT NULL)&#10;ー art_move（Active storageで実装）&#10;ー category_id (integer型,NOT NULL)&#10;ー value  (integer型,NOT NULL)&#10;ー description(text型,NOT NULL)&#10;ー condition_id (integer型,NOT NULL)&#10;ー shipping_cost_id (integer型,NOT NULL)&#10;ー shipping_area_id (integer型,NOT NULL)&#10;ー shipping_day_id (integer型,NOT NULL)&#10;ー user_id (referrences型,NOT NULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="7" vertex="1">
                     <mxGeometry y="30" width="260" height="170" as="geometry"/>
                 </mxCell>
                 <mxCell id="9" value="shipping addresses テーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
