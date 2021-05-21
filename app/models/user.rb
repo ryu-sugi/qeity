@@ -11,4 +11,5 @@ class User < ApplicationRecord
     validates :last_name_furigana
     validates :birth_date
   end
+  has_many :works
 end

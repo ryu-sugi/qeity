@@ -1,7 +1,31 @@
 <%= render "shared/second-header"%>
-<main class="main">
-  <div class="inner">
-    <%= link_to current_user.nickname, user_path(current_user.id), method: :GET, class: "#" %>
+<main class="#">
+  <div class="#">
+    <%= link_to current_user.nickname, user_path(current_user.id), method: :GET, class: "#" %>さんの作品一覧
+
+    <% @works.each do |work| %>
+     <% if work.video.attached? %>
+      <li class='#'>
+       <%= link_to work_path(work.id), method: :get do %>
+        <div class='#'>
+          <%= video_tag rails_blob_path(work.video), autoplay: :true, loop: :true, muted: :true, class:"move-list"%>
+        </div>
+        <div class='#'>
+          <h3 class='item-name'>
+            <%= work.work_name %>
+          </h3>
+          <div class='#'>
+            現在価格<%= work.value %>円<br><%= work.shipping_cost.name %>
+            <div class='star-btn'>
+            <%= image_tag "good.png", class:"star-icon" %>
+              <span class='star-count'>0</span>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      <% end %>
+    <% end %>
+
      <% if user_signed_in?  && current_user.id %>
           <%= link_to "編集する", "#", class: "#" %>
           <%= link_to "削除する", "#", class: "#" %>
