@@ -16,6 +16,10 @@ class WorksController < ApplicationController
     end
   end
 
+  def show
+    @work = Work.find(params[:id])
+  end
+
   private
   def work_params
     params.require(:work).permit(:work_name, :category_id, :video, :shipping_area_id, :shipping_day_id,
